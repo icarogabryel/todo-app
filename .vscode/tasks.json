@@ -7,12 +7,42 @@
 			"command": "python",
 			"args": ["src/backend/manage.py", "runserver"],
 			"presentation": {
-			"reveal": "always",
-			"panel": "shared"
+				"reveal": "always",
+				"panel": "shared"
 			},
 			"group": {
-			"kind": "build",
-			"isDefault": true
+				"kind": "build",
+				"isDefault": false
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Make Migrations",
+			"type": "shell",
+			"command": "python",
+			"args": ["src/backend/manage.py", "makemigrations"],
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Migrate",
+			"type": "shell",
+			"command": "python",
+			"args": ["src/backend/manage.py", "migrate"],
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": false
 			},
 			"problemMatcher": []
 		}
